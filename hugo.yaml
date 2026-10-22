@@ -1,0 +1,80 @@
+baseURL: "https://opengensokyo.net/"
+title: "Open Gensokyo Network"
+locale: "en"
+
+enableRobotsTXT: true
+enableGitInfo: true
+
+module:
+  imports:
+    - path: github.com/imfing/hextra
+
+markup:
+  goldmark:
+    renderer:
+      unsafe: true
+    extensions:
+      passthrough:
+        delimiters:
+          block: [['\[', '\]'], ['$$', '$$']]
+          inline: [['\(', '\)']]
+        enable: true
+  highlight:
+    noClasses: false
+
+menu:
+  main:
+    - name: Blog
+      pageRef: /blog
+      weight: 1
+    - name: About
+      pageRef: /about
+      weight: 2
+    - name: Search
+      weight: 3
+      params:
+        type: search
+    - name: GitHub
+      weight: 4
+      url: "https://github.com/opengensokyonet"
+      params:
+        icon: github
+
+params:
+  description: "Open, compatible and private connectivity for services on the existing Internet."
+
+  navbar:
+    displayTitle: true
+    displayLogo: false
+    width: normal
+
+  theme:
+    default: system
+    displayToggle: true
+
+  footer:
+    enable: true
+    displayCopyright: true
+    displayPoweredBy: false
+    width: normal
+
+  displayUpdatedDate: true
+  dateFormat: "January 2, 2006"
+
+  search:
+    enable: true
+    type: flexsearch
+    flexsearch:
+      index: content
+      tokenize: forward
+
+  editURL:
+    enable: false
+
+  blog:
+    list:
+      displayTags: true
+      sortBy: date
+      sortOrder: desc
+    article:
+      displayPagination: true

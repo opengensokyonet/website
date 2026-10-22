@@ -1,0 +1,16 @@
+{{- /* Lists the newest blog posts; with list="false", renders only the placeholder shown while the blog is empty. */ -}}
+{{- $count := .Get "count" | default 5 | int -}}
+{{- $list := ne (.Get "list") "false" -}}
+{{- $posts := where site.RegularPages "Section" "blog" -}}
+{{- if $posts -}}
+  {{- if $list }}
+<ul>
+  {{- range first $count $posts.ByDate.Reverse }}
+  <li><a href="{{ .RelPermalink }}">{{ .Title }}</a> <span class="hx:text-gray-500">· {{ .Date | time.Format site.Params.dateFormat }}</span></li>
+  {{- end }}
+</ul>
+<p><a href="{{ "blog/" | relURL }}">All posts →</a></p>
+  {{- end -}}
+{{- else -}}
+<p>No posts yet. The first ones are on the way; subscribe to the <a href="{{ "blog/index.xml" | relURL }}">RSS feed</a> to get them when they are published.</p>
+{{- end -}}
