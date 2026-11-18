@@ -37,7 +37,7 @@ layout: hextra-home
 <div class="content hx:mt-12 hx:w-full">
 
 {{< callout type="info" >}}
-**Status: design phase.** The protocols and their Rust implementation are being designed. There is no usable release yet. Experimental building blocks, such as [nitori](https://github.com/opengensokyonet/nitori), are developed in the open on GitHub.
+**Status: early implementation.** [sakuya](https://github.com/opengensokyonet/sakuya), the project's QUIC implementation in Rust, completes handshakes and exchanges data with other QUIC implementations; its APIs are experimental, and there is no release yet. The protocols built on it are still being designed. Code, including sakuya and [nitori](https://github.com/opengensokyonet/nitori), is developed in the open on GitHub.
 {{< /callout >}}
 
 ## Latest from the blog

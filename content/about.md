@@ -23,7 +23,9 @@ Services identified only by a domain name keep using ordinary certificates.
 
 ## Status
 
-The project is in its design phase, and there is no usable release yet. Design write-ups and development notes are published on the [blog](/blog/). Experimental code, such as [nitori](https://github.com/opengensokyonet/nitori), is developed in the open on GitHub.
+[sakuya](https://github.com/opengensokyonet/sakuya), the project's QUIC version 1 implementation in Rust, is at an early stage. Its clients and servers complete the handshake and exchange stream data, interoperate with quic-go, quinn and quiche, and support the DATAGRAM extension and the reliable stream reset draft. Its APIs are experimental, and there is no release yet. The protocols built on it, such as self-certifying identity, are still being designed.
+
+Design write-ups and development notes are published on the [blog](/blog/). Code, including sakuya and [nitori](https://github.com/opengensokyonet/nitori), the library its asynchronous operations are built on, is developed in the open on GitHub.
 
 ## Support
 
