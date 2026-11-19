@@ -3,8 +3,8 @@ title: An async operation's resource and its waits
 date: 2026-10-28
 draft: false
 authors:
-  - name: yiyue@starspunworks.com
-    link: mailto:yiyue@starspunworks.com
+  - name: yiyue@opengensokyo.net
+    link: mailto:yiyue@opengensokyo.net
 ---
 
 An async operation in Rust is a future, and a future holds two things for as
